@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugar paitent</title>
+    <link rel="icon" type="image/png" href="./images/diabetes.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Signin</a></li>
+            </ul>
+
+            <ul>
+                <li class="logo"><a href="index.html"><img src="./images/diabetes.png"></a></li>
+                <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="product.html">Product</a></li>
+                <li class="hideOnMobile"><a href="about.html">About</a></li>
+                <li class="hideOnMobile"><a href="contact.html">Contact Us</a></li>
+                <li class="hideOnMobile">
+                    <div class="search-wrapper" style="position: relative;">
+                        <li class="hideOnMobile">
+                            <div class="search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input class="search-input" type="search" placeholder="Search...">
+                            </div>
+                        </li>
+                        <!-- Dropdown results container -->
+                        <div id="foodSearchResults"></div>
+                      </div>
+                </li>
+                
+                <li class="hideOnMobile"><a href="login.html">signin</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="foodSearchResults"></div>
+
+    <section class="home" id="home">
+        <div class="image">
+            <img src="images/main.png" alt="some pic">
+        </div>
+
+        <div class="content">
+            <h3>stay safe, stay healthy</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus officia amet aliquid odit,
+                facere facilis provident eos architecto, fugit sit accusamus tempora explicabo dicta even
+                iet deleniti! Numquam, nesciunt. Assumenda, soluta.</p>
+            <a href="#" class="btn">Contact Us<span class="fas fa-chevron-right"></span></a>
+        </div>
+
+    </section>
+
+    <!-- Module 1: Health Predictor -->
+
+    <div class="prediction">
+        <h1 class="prediction-title">Predict Your sugar level</h1>
+
+        <form action="" id="predictionForm" class="Block">
+            <label for="calories">Avg Calories:</label>
+            <input type="number" id="calories" name="calories" required><br><br>
+
+            <label for="activity">Avg Activity (min): </label>
+            <input type="number" id="activity" name="activity" required><br><br>
+
+            <label for="sleep">Sleep (hr):</label>
+            <input type="number" id="sleep" name="sleep" required><br><br>
+
+            <label for="weight">weight (kg):</label>
+            <input type="number" id="weight" name="weight" required><br><br>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+
+        <h2 class="pre">Predicted Sugar Level: --mg/dL <span id="result"></span></h2>
+        <div id="healthAdvice"></div>
+    </div>
+
+    <hr>
+
+        <!--Diet plan module-->
+        <section class="diet-plan-section Block">
+            <h2>Generate Your Personalized Diet Plan</h2>
+            <label for="caloriesInput">Enter Your Daily Calorie Intake:</label>
+            <input type="number" id="caloriesInput" placeholder="Calories (e.g., 1800)">
+        
+            <label for="sugarLevelInput">Enter Your Current Sugar Level (mg/dL):</label>
+            <input type="number" id="sugarLevelInput" placeholder="Sugar Level (e.g., 120)">
+        
+            <button id="generateDietButton">Generate Diet Plan</button>
+        
+            <div id="dietPlanResults"></div> <!-- Diet plan appears here -->
+        </section>
+
+    <!--Dietary Recommendation for Sugar Paitent-->
+
+    <div class="container Block">
+        <h1 class="title-no1">Dietary Recommendation for Sugar Paitent</h1>
+
+
+        <div class="recommendation-card">
+            <h2>High-Fiber Foods</h2>
+            <p>Choose whole grains like oats, quinoa, and whole wheat. Non-starchy vegetables like spinach, kale, and
+                broccoli are great choices due to their high fiber content and low glycemic index.</p>
+        </div>
+
+        <div class="recommendation-card">
+            <h2>Lean Proteins</h2>
+            <p>Opt for fish (salmon, sardines) and lean poultry. Beans, legumes, tofu, and low-fat dairy are
+                protein-rich and help control blood sugar.</p>
+        </div>
+
+        <div class="recommendation-card">
+            <h2>Low-Glycemic Fruits</h2>
+            <p>Enjoy berries (blueberries, strawberries), apples, and pears in moderate portions. Pair them with protein
+                or healthy fats to prevent spikes.</p>
+        </div>
+
+        <div class="recommendation-card">
+            <h2>Hydration and Beverages</h2>
+            <p>Stay hydrated with water and unsweetened herbal teas. Avoid sugary drinks and try infused water with
+                lemon or cucumber as a refreshing alternative.</p>
+        </div>
+
+        <div class="recommendation-card">
+            <h2>Portion Control and Timing</h2>
+            <p>Eat small, frequent meals for stable blood sugar. Balance meals with protein, fiber, and healthy fat for
+                a slow and even digestion.</p>
+        </div>
+    </div>
+
+    <!--Suagr Patient Friendly Food List -->
+    
+
+    <main class="main-container">
+        <h1 class="main-title">Diabetes-Friendly Food List</h1>
+    
+        <div class="selector-container">
+            <label>Sugar State:
+                <select id="sugarState">
+                    <option value="pre">Pre-Diabetes</option>
+                    <option value="type1">Type 1 Diabetes</option>
+                    <option value="type2">Type 2 Diabetes</option>
+                    <option value="advanced">Advanced Diabetes</option>
+                </select>
+            </label>
+    
+            <label>Time of Day:
+                <select id="timeOfDay">
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+            </label>
+    
+            <label>Price Preference:
+                <select id="pricePreference">
+                    <option value="cheap">Cheaper</option>
+                    <option value="costly">Costly</option>
+                </select>
+            </label>
+    
+            <label>Taste Preference:
+                <select id="tastePreference">
+                    <option value="sweet">Sweet</option>
+                    <option value="savory">Savory</option>
+                    <option value="spicy">Spicy</option>
+                    <option value="mild">Mild</option>
+                </select>
+            </label>
+    
+            <button onclick="suggestFood()">Get Suggestions</button>
+        </div>
+    
+        <div id="foodContainer" class="food-container"></div>
+    </main>
+    
+    
+
+
+    <!-- Footer section-->
+
+    <footer>
+        <div class="footer-container">
+            <div class="Sugar-Paitent">
+                <h2>Sugar Paitent</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut non quidem laborum temporibus
+                    quasi vitae eaque molestiae provident consequatur beatae, aspernatur ad asperiores nisi cum
+                    neque rerum sunt odio suscipit.</p>
+
+                <ul class="linkss">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="quicklinks">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="#">+92 1234567890</a></p>
+                    </li>
+
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="#">SugarPaitent@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="end">
+            <h5>All rights are reserved</h5>
+        </div>
+    </footer>
+
+
+   <!-- <script src="foodData.js"></script> -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>

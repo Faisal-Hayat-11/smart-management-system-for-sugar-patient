@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugar paitent</title>
+    <link rel="icon" type="image/png" href="./images/diabetes.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Signin</a></li>
+            </ul>
+
+            <ul>
+                <li class="logo"><a href="index.html"><img src="./images/diabetes.png"></a></li>
+                <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="product.html">Product</a></li>
+                <li class="hideOnMobile"><a href="about.html">About</a></li>
+                <li class="hideOnMobile"><a href="contact.html">Contact Us</a></li>
+                <li class="hideOnMobile">
+                    <div class="search-wrapper" style="position: relative;">
+                        <li class="hideOnMobile">
+                            <div class="search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input class="search-input" type="search" id="searchInput" placeholder="Search...">
+                                <button id="searchButton" style="display: none;"></button>
+                            </div>
+                        </li>
+                        
+                      </div>
+                </li>
+                
+                <li class="hideOnMobile"><a href="login.html">signin</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Dropdown results container -->
+    <div id="foodSearchResults"></div>
+
+    <!--Suagr Patient Friendly Food List -->
+
+    <main class="main-container">
+        
+        <h1 class="main-title">Diabetes-Friendly Food List</h1>
+        <div class="food-container Block">
+    
+            <div class="food-card">
+                <img src="./images/fish.jpg" alt="spinach">
+                <h2>Fatty fish</h2>
+                <p>No Sugar</p>
+            </div>
+    
+            <div class="food-card">
+                <img src="./images/avocados.jpg" alt="spinach">
+                <h2>spinach</h2>
+                <p>0.66 grams of sugar per 100 grams</p>
+            </div>
+    
+            <div class="food-card">
+                <img src="./images/fried-eggs.jpeg" alt="spinach">
+                <h2>Fried eggs</h2>
+                <p>0.4g Sugar</p>
+            </div>
+    
+            <div class="food-card">
+                <img src="./images/Spinach.jpg" alt="spinach">
+                <h2>spinach</h2>
+                <p>0.4g Sugar</p>
+            </div>
+    
+            <div class="food-card">
+                <img src="./images/walnuts.jpeg" alt="spinach">
+                <h2>Walnuts</h2>
+                <p>2.6 g Sugar</p>
+            </div>
+    
+            <div class="food-card">
+                <img src="./images/greek-yogurt.jpg" alt="spinach">
+                <h2>Greek yogurt</h2>
+                <p>3.2 g Sugar in 100 grams</p>
+            </div>
+    
+            <div class="food-card">
+                <img src="./images/oil.jpg" alt="spinach">
+                <h2>Extra-virgin olive oil </h2>
+                <p>No Sugar</p>
+            </div>
+    
+            <div class="food-card">
+                <img src="./images/straw.jpeg" alt="spinach">
+                <h2>Strawberries</h2>
+                <p>100 grams of strawberries contains about 4.89 grams of sugar</p>
+            </div>
+    
+            <div class="food-card">
+                <img src="./images/beans.jpg" alt="spinach">
+                <h2>Beans</h2>
+                <p>2.2g Sugar in 100 grams of beans</p>
+            </div>
+    
+            <div class="food-card">
+                <img src="./images/Shirataki.jpeg" alt="spinach">
+                <h2>Shirataki noodles</h2>
+                <p>No Sugar</p>
+            </div>
+    
+        </div>
+    </main>
+
+    <!-- Footer section-->
+
+    <footer>
+        <div class="footer-container">
+            <div class="Sugar-Paitent">
+                <h2>Sugar Paitent</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut non quidem laborum temporibus
+                    quasi vitae eaque molestiae provident consequatur beatae, aspernatur ad asperiores nisi cum
+                    neque rerum sunt odio suscipit.</p>
+
+                <ul class="linkss">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="quicklinks">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="#">+92 1234567890</a></p>
+                    </li>
+
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="#">SugarPaitent@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="end">
+            <h5>All rights are reserved</h5>
+        </div>
+    </footer>
+
+    <script src="js/productmodule.js"></script>
+</body>
+</html>

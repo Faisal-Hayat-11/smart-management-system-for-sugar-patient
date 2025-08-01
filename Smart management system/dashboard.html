@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Admin Dashboard</h2>
+            <ul>
+                <li><a href="#user-management"><i class="fas fa-users"></i> User Management</a></li>
+                <li><a href="#diet-plan"><i class="fas fa-utensils"></i> Diet Plan</a></li>
+                <li><a href="#health-prediction"><i class="fas fa-heartbeat"></i> Health Prediction</a></li>
+                <li><a href="#contact-form"><i class="fas fa-envelope"></i> Contact Form</a></li>
+                <li><a href="#food-data"><i class="fas fa-database"></i> Food Data</a></li>
+                <li><a href="#admin-functions"><i class="fas fa-cog"></i> Admin Functions</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- User Management Section -->
+            <section id="user-management" class="dashboard-section">
+                <h2>User Management</h2>
+                <div class="user-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="userTableBody">
+                            <!-- Users will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Diet Plan Generation Section -->
+            <section id="diet-plan" class="dashboard-section">
+                <h2>Diet Plan Generation</h2>
+                <form id="dietPlanForm">
+                    <label for="calories">Daily Calories:</label>
+                    <input type="number" id="calories" name="calories" required>
+                    <label for="sugarLevel">Sugar Level (mg/dL):</label>
+                    <input type="number" id="sugarLevel" name="sugarLevel" required>
+                    <button type="submit">Generate Diet Plan</button>
+                </form>
+                <div id="dietPlanResult"></div>
+            </section>
+
+            <!-- Health Prediction Section -->
+            <section id="health-prediction" class="dashboard-section">
+                <h2>Health Prediction</h2>
+                <form id="healthPredictionForm">
+                    <label for="caloriesInput">Avg Calories:</label>
+                    <input type="number" id="caloriesInput" name="calories" required>
+                    <label for="activityInput">Avg Activity (min):</label>
+                    <input type="number" id="activityInput" name="activity" required>
+                    <label for="sleepInput">Sleep (hr):</label>
+                    <input type="number" id="sleepInput" name="sleep" required>
+                    <label for="weightInput">Weight (kg):</label>
+                    <input type="number" id="weightInput" name="weight" required>
+                    <button type="submit">Predict Sugar Level</button>
+                </form>
+                <div id="healthPredictionResult"></div>
+            </section>
+
+            <!-- Contact Form Handling Section -->
+            <section id="contact-form" class="dashboard-section">
+                <h2>Contact Form Messages</h2>
+                <div class="contact-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Message</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="contactTableBody">
+                            <!-- Contact messages will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Food Data Management Section -->
+            <section id="food-data" class="dashboard-section">
+                <h2>Food Data Management</h2>
+                <form id="foodDataForm">
+                    <label for="foodName">Food Name:</label>
+                    <input type="text" id="foodName" name="foodName" required>
+                    <label for="calories">Calories:</label>
+                    <input type="number" id="calories" name="calories" required>
+                    <label for="carbs">Carbs (g):</label>
+                    <input type="number" id="carbs" name="carbs" required>
+                    <label for="protein">Protein (g):</label>
+                    <input type="number" id="protein" name="protein" required>
+                    <label for="fat">Fat (g):</label>
+                    <input type="number" id="fat" name="fat" required>
+                    <button type="submit">Add Food</button>
+                </form>
+                <div id="foodDataResult"></div>
+            </section>
+
+            <!-- Admin Functions Section -->
+            <section id="admin-functions" class="dashboard-section">
+                <h2>Admin Functions</h2>
+                <div class="admin-actions">
+                    <button onclick="backupDatabase()">Backup Database</button>
+                    <button onclick="clearCache()">Clear Cache</button>
+                    <button onclick="generateReport()">Generate Report</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
